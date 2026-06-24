@@ -594,13 +594,24 @@ button {
   overflow-x: auto;
   scrollbar-width: none;
   padding-bottom: 16px;
+  position: relative;
 }
 .about-career-scroll::-webkit-scrollbar { display: none; }
+
+/* Continuous line */
+.about-career-line {
+  position: absolute;
+  top: 42px; left: 0; right: 0;
+  height: 1px;
+  background: var(--accent-dim);
+  min-width: max-content;
+}
 
 .about-career-entries {
   display: flex;
   gap: 0;
   min-width: max-content;
+  position: relative;
 }
 .about-career-entry {
   display: flex;
@@ -618,42 +629,26 @@ button {
   transform: translateY(-4px);
 }
 
-/* Date row */
-.about-career-date-row {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  padding-bottom: 20px;
-  width: 100%;
-}
 .about-career-date {
   font-family: var(--font-mono);
   font-size: 12px; font-weight: 500;
   color: var(--accent);
   letter-spacing: 0.05em;
   white-space: nowrap;
+  padding-bottom: 20px;
 }
 
-/* Marker + line row */
-.about-career-marker-row {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 20px;
-  width: 100%;
-}
+/* Marker on continuous line */
 .about-career-marker {
   width: 10px; height: 10px;
   transform: rotate(45deg);
   background: var(--bg-base);
   border: 2px solid var(--accent);
   flex-shrink: 0;
+  margin-bottom: 20px;
   transition: all 0.3s ease;
-}
-.about-career-marker-line {
-  flex: 1;
-  height: 1px;
-  background: var(--accent-dim);
+  position: relative;
+  z-index: 2;
 }
 .about-career-entry.highlight .about-career-marker {
   background: var(--accent);
