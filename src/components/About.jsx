@@ -55,18 +55,47 @@ const experiences = [
 
 export default function About() {
   const scrollRef = useRef(null);
+  const dragRef = useRef({ down: false, startX: 0, scrollLeft: 0 });
 
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
+
     const onWheel = (e) => {
       if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
         e.preventDefault();
         el.scrollLeft += e.deltaY;
       }
     };
+
+    const onDown = (e) => {
+      dragRef.current = { down: true, startX: e.pageX, scrollLeft: el.scrollLeft };
+      el.style.cursor = 'grabbing';
+    };
+    const onUp = () => {
+      dragRef.current.down = false;
+      el.style.cursor = 'grab';
+    };
+    const onMove = (e) => {
+      if (!dragRef.current.down) return;
+      e.preventDefault();
+      el.scrollLeft = dragRef.current.scrollLeft - (e.pageX - dragRef.current.startX);
+    };
+
+    el.style.cursor = 'grab';
     el.addEventListener('wheel', onWheel, { passive: false });
-    return () => el.removeEventListener('wheel', onWheel);
+    el.addEventListener('mousedown', onDown);
+    el.addEventListener('mouseup', onUp);
+    el.addEventListener('mouseleave', onUp);
+    el.addEventListener('mousemove', onMove);
+
+    return () => {
+      el.removeEventListener('wheel', onWheel);
+      el.removeEventListener('mousedown', onDown);
+      el.removeEventListener('mouseup', onUp);
+      el.removeEventListener('mouseleave', onUp);
+      el.removeEventListener('mousemove', onMove);
+    };
   }, []);
 
   return (

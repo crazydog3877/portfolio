@@ -595,6 +595,8 @@ button {
   scrollbar-width: none;
   padding-bottom: 16px;
   position: relative;
+  user-select: none;
+  cursor: grab;
 }
 .about-career-scroll::-webkit-scrollbar { display: none; }
 
