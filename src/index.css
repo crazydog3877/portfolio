@@ -571,24 +571,6 @@ button {
 
 .about-career-body {
   position: relative;
-  overflow: hidden;
-}
-.about-career-body::before,
-.about-career-body::after {
-  content: '';
-  position: absolute;
-  top: 0; bottom: 0;
-  width: 100px;
-  z-index: 3;
-  pointer-events: none;
-}
-.about-career-body::before {
-  left: 0;
-  background: linear-gradient(90deg, #0a0b0f 0%, transparent 100%);
-}
-.about-career-body::after {
-  right: 0;
-  background: linear-gradient(270deg, #0a0b0f 0%, transparent 100%);
 }
 .about-career-scroll {
   overflow-x: auto;
@@ -599,6 +581,25 @@ button {
   cursor: grab;
 }
 .about-career-scroll::-webkit-scrollbar { display: none; }
+
+/* Fade edges on scroll container */
+.about-career-scroll::before,
+.about-career-scroll::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 100px;
+  z-index: 5;
+  pointer-events: none;
+}
+.about-career-scroll::before {
+  left: 0;
+  background: linear-gradient(90deg, #0a0b0f 0%, transparent 100%);
+}
+.about-career-scroll::after {
+  right: 0;
+  background: linear-gradient(270deg, #0a0b0f 0%, transparent 100%);
+}
 
 /* Continuous line */
 .about-career-line {
