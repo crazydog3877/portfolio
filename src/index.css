@@ -1324,3 +1324,18 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================
+   Grainient Background
+   ============================================ */
+.grainient-bg-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.35;
+}
+.content-sections {
+  position: relative;
+  z-index: 1;
+}
