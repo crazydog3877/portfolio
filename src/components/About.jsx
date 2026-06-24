@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react';
 import TiltedCard from './TiltedCard';
 
 const experiences = [
@@ -53,6 +54,21 @@ const experiences = [
 ];
 
 export default function About() {
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const onWheel = (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        e.preventDefault();
+        el.scrollLeft += e.deltaY;
+      }
+    };
+    el.addEventListener('wheel', onWheel, { passive: false });
+    return () => el.removeEventListener('wheel', onWheel);
+  }, []);
+
   return (
     <section className="about" id="about">
       <div className="container">
@@ -131,7 +147,7 @@ export default function About() {
           </div>
 
           <div className="about-career-body">
-            <div className="about-career-scroll">
+            <div className="about-career-scroll" ref={scrollRef}>
               <div className="about-career-line" />
               <div className="about-career-entries">
               {experiences.map((exp, i) => (
