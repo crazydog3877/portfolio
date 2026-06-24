@@ -10,7 +10,7 @@ export default function About() {
           <div className="about-visual">
             <div className="about-tilt-wrapper">
               <TiltedCard
-                imageSrc="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&h=750&fit=crop&q=80"
+                imageSrc="/avatar.png"
                 altText="沈震霄"
                 captionText="沈震霄 — Designer"
                 containerHeight="100%"
