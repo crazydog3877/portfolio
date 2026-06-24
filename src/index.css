@@ -400,7 +400,7 @@ button {
    ============================================ */
 .about {
   position: relative;
-  padding: var(--section-padding) 0;
+  padding: var(--section-padding) 0 0 0;
   background: var(--bg-base);
 }
 .about-grid {
