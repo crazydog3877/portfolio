@@ -74,12 +74,15 @@ export default function TiltedCard({
   }
 
   return (
-    <figure
+    <motion.figure
       ref={ref}
       className="tilted-card-figure"
       style={{
         height: containerHeight,
         width: containerWidth,
+        rotateX,
+        rotateY,
+        scale,
       }}
       onMouseMove={handleMouse}
       onMouseEnter={handleMouseEnter}
@@ -91,17 +94,14 @@ export default function TiltedCard({
         </div>
       )}
 
-      <motion.div
+      <div
         className="tilted-card-inner"
         style={{
           width: imageWidth,
           height: imageHeight,
-          rotateX,
-          rotateY,
-          scale,
         }}
       >
-        <motion.img
+        <img
           src={imageSrc}
           alt={altText}
           className="tilted-card-img"
@@ -112,9 +112,9 @@ export default function TiltedCard({
         />
 
         {displayOverlayContent && overlayContent && (
-          <motion.div className="tilted-card-overlay">{overlayContent}</motion.div>
+          <div className="tilted-card-overlay">{overlayContent}</div>
         )}
-      </motion.div>
+      </div>
 
       {showTooltip && (
         <motion.figcaption
@@ -129,6 +129,6 @@ export default function TiltedCard({
           {captionText}
         </motion.figcaption>
       )}
-    </figure>
+    </motion.figure>
   );
 }
