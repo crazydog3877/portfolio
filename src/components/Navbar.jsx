@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 
 const navItems = [
   { label: '关于', href: '#about' },
-  { label: '项目', href: '#projects' },
   { label: '能力', href: '#skills' },
+  { label: '项目', href: '#projects' },
   { label: '联系', href: '#contact' },
 ];
 
