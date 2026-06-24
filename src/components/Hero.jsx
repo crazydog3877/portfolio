@@ -2,14 +2,14 @@ import Aurora from './Aurora';
 import CircularGallery from './CircularGallery';
 
 const galleryItems = [
-  { image: 'https://picsum.photos/seed/trading/800/600', text: '海通证券 — e海方舟' },
-  { image: 'https://picsum.photos/seed/finance/800/600', text: '兴业证券 SMT-Q V5.0' },
-  { image: 'https://picsum.photos/seed/app/800/600', text: '华龙点金智慧版' },
-  { image: 'https://picsum.photos/seed/website/800/600', text: '皓天智通企业官网' },
-  { image: 'https://picsum.photos/seed/dashboard/800/600', text: '海通证券 — e海方舟' },
-  { image: 'https://picsum.photos/seed/chart/800/600', text: '兴业证券 SMT-Q V5.0' },
-  { image: 'https://picsum.photos/seed/mobile/800/600', text: '华龙点金智慧版' },
-  { image: 'https://picsum.photos/seed/brand/800/600', text: '皓天智通企业官网' },
+  { image: 'https://picsum.photos/seed/trading/800/600', text: '' },
+  { image: 'https://picsum.photos/seed/finance/800/600', text: '' },
+  { image: 'https://picsum.photos/seed/app/800/600', text: '' },
+  { image: 'https://picsum.photos/seed/website/800/600', text: '' },
+  { image: 'https://picsum.photos/seed/dashboard/800/600', text: '' },
+  { image: 'https://picsum.photos/seed/chart/800/600', text: '' },
+  { image: 'https://picsum.photos/seed/mobile/800/600', text: '' },
+  { image: 'https://picsum.photos/seed/brand/800/600', text: '' },
 ];
 
 export default function Hero() {

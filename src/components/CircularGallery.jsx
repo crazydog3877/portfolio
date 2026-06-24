@@ -208,8 +208,9 @@ class Media {
     if (screen) this.screen = screen;
     if (viewport) { this.viewport = viewport; }
     this.scale = this.screen.height / 1500;
-    this.plane.scale.y = (this.viewport.height * (900 * this.scale)) / this.screen.height;
-    this.plane.scale.x = (this.viewport.width * (700 * this.scale)) / this.screen.width;
+    const size = (this.viewport.height * (700 * this.scale)) / this.screen.height;
+    this.plane.scale.y = size;
+    this.plane.scale.x = size;
     this.plane.program.uniforms.uPlaneSizes.value = [this.plane.scale.x, this.plane.scale.y];
     this.padding = 2; this.width = this.plane.scale.x + this.padding;
     this.widthTotal = this.width * this.length; this.x = this.width * this.index;
