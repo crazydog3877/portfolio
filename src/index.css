@@ -618,15 +618,19 @@ button {
   flex-direction: column;
   align-items: flex-start;
   position: relative;
-  padding: 0 60px;
+  padding: 20px 28px;
+  margin: 0 32px;
   border-radius: 12px;
-  transition: background 0.3s ease, transform 0.3s ease;
+  border: 1px solid transparent;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   opacity: 0;
   animation: fadeInUp 0.6s var(--ease-out) forwards;
 }
 .about-career-entry:hover {
-  background: rgba(255, 255, 255, 0.03);
-  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.025);
+  border-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.04) inset;
+  transform: translateY(-2px);
 }
 
 .about-career-date {
