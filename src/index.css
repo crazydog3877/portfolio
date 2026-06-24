@@ -72,6 +72,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.03;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.3) 0px, rgba(255,255,255,0.3) 1px, transparent 1px, transparent 30px),
+    repeating-linear-gradient(-45deg, rgba(255,255,255,0.2) 0px, rgba(255,255,255,0.2) 1px, transparent 1px, transparent 50px),
+    repeating-linear-gradient(0deg, rgba(255,112,35,0.15) 0px, rgba(255,112,35,0.15) 1px, transparent 1px, transparent 80px),
+    repeating-linear-gradient(90deg, rgba(6,182,212,0.1) 0px, rgba(6,182,212,0.1) 1px, transparent 1px, transparent 80px);
+}
 
 ::-webkit-scrollbar {
   width: 4px;
