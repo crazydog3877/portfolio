@@ -46,7 +46,7 @@ export default function Skills() {
               glowRadius={50}
               glowIntensity={1.8}
               coneSpread={30}
-              colors={['#FF9900', '#FFAD33', '#06B6D4']}
+              colors={['#FF7023', '#FF8F4D', '#06B6D4']}
               fillOpacity={0.5}
             >
               <div className="skill-card">

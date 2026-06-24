@@ -18,9 +18,9 @@
   --text-dim: #3a3c47;
 
   /* Accent — refined warm gold */
-  --accent: #FF9900;
-  --accent-hover: #FFAD33;
-  --accent-dim: #995C00;
+  --accent: #FF7023;
+  --accent-hover: #FF8F4D;
+  --accent-dim: #993D00;
 
   /* Accent secondary — subtle cyan */
   --accent-cyan: #06B6D4;
@@ -202,7 +202,7 @@ button {
 .btn-primary:hover {
   background: var(--accent-hover);
   transform: translateY(-1px);
-  box-shadow: 0 8px 32px rgba(255, 153, 0, 0.2);
+  box-shadow: 0 8px 32px rgba(255, 112, 35, 0.2);
 }
 
 .btn-ghost {
@@ -299,7 +299,7 @@ button {
 .navbar-cta:hover {
   background: var(--accent-hover);
   transform: translateY(-1px);
-  box-shadow: 0 4px 20px rgba(255, 153, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(255, 112, 35, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -630,7 +630,7 @@ button {
   text-transform: uppercase;
   color: var(--accent);
   display: inline-block;
-  background: rgba(255, 153, 0, 0.08);
+  background: rgba(255, 112, 35, 0.08);
   padding: 4px 10px;
   border-radius: 3px;
   align-self: flex-start;
@@ -721,7 +721,7 @@ button {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 50% 40%, rgba(255, 153, 0, 0.05) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 40%, rgba(255, 112, 35, 0.05) 0%, transparent 60%),
     radial-gradient(ellipse at 20% 80%, rgba(6, 182, 212, 0.04) 0%, transparent 40%);
   z-index: 0;
 }
