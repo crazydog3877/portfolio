@@ -55,13 +55,14 @@
   position: absolute;
   left: 0;
   top: 0;
-  border-radius: 6px;
-  background-color: var(--bg-elevated);
-  border: 1px solid var(--border-standard);
-  padding: 8px 16px;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text-primary);
+  border-radius: 8px;
+  background: linear-gradient(135deg, #FF7023 0%, #FF8F4D 100%);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0a0b0f;
   opacity: 0;
   z-index: 3;
+  box-shadow: 0 4px 16px rgba(255,112,35,0.35), 0 1px 0 rgba(255,255,255,0.15) inset;
 }
