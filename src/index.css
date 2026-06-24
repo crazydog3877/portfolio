@@ -400,13 +400,13 @@ button {
    ============================================ */
 .about {
   position: relative;
-  padding: var(--section-padding) 0 0 0;
+  padding: var(--section-padding) 0;
   background: var(--bg-base);
 }
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 40px;
   align-items: center;
 }
 .about-visual {
