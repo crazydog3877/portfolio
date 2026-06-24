@@ -596,25 +596,18 @@ button {
   padding-bottom: 16px;
 }
 .about-career-scroll::-webkit-scrollbar { display: none; }
-.about-career-line {
-  position: absolute;
-  top: 34px; left: 0; right: 0;
-  height: 1px;
-  background: var(--accent-dim);
-  z-index: 0;
-}
+
 .about-career-entries {
   display: flex;
-  gap: 120px;
+  gap: 0;
   min-width: max-content;
-  padding: 0 20px;
 }
 .about-career-entry {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   position: relative;
-  z-index: 1;
-  flex: 0 0 320px;
-  padding: 16px;
-  margin: -16px;
+  padding: 0 60px;
   border-radius: 12px;
   transition: background 0.3s ease, transform 0.3s ease;
   opacity: 0;
@@ -624,28 +617,43 @@ button {
   background: rgba(255, 255, 255, 0.03);
   transform: translateY(-4px);
 }
+
+/* Date row */
+.about-career-date-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding-bottom: 20px;
+  width: 100%;
+}
 .about-career-date {
   font-family: var(--font-mono);
   font-size: 12px; font-weight: 500;
   color: var(--accent);
   letter-spacing: 0.05em;
-  text-align: left;
-  padding-bottom: 24px;
+  white-space: nowrap;
+}
+
+/* Marker + line row */
+.about-career-marker-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 20px;
+  width: 100%;
 }
 .about-career-marker {
-  position: absolute;
-  top: 29px; left: 16px;
-  transform: rotate(45deg);
   width: 10px; height: 10px;
+  transform: rotate(45deg);
   background: var(--bg-base);
   border: 2px solid var(--accent);
-  z-index: 2;
+  flex-shrink: 0;
   transition: all 0.3s ease;
 }
-.about-career-entry:hover .about-career-marker {
-  background: var(--accent);
-  box-shadow: 0 0 14px rgba(255, 112, 35, 0.5);
-  transform: rotate(45deg) scale(1.3);
+.about-career-marker-line {
+  flex: 1;
+  height: 1px;
+  background: var(--accent-dim);
 }
 .about-career-entry.highlight .about-career-marker {
   background: var(--accent);
@@ -654,7 +662,14 @@ button {
 .about-career-entry.education .about-career-marker {
   border-style: dashed; background: var(--bg-base); border-color: var(--border-standard);
 }
-.about-career-content { padding-top: 28px; }
+.about-career-entry:hover .about-career-marker {
+  background: var(--accent);
+  box-shadow: 0 0 14px rgba(255, 112, 35, 0.5);
+  transform: rotate(45deg) scale(1.3);
+}
+
+/* Content */
+.about-career-content { padding-top: 24px; width: 240px; }
 .about-career-company {
   font-family: var(--font-display);
   font-size: 15px; font-weight: 600;

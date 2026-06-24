@@ -131,7 +131,6 @@ export default function About() {
           </div>
 
           <div className="about-career-body">
-            <div className="about-career-line" />
             <div className="about-career-scroll">
               <div className="about-career-entries">
               {experiences.map((exp, i) => (
@@ -140,8 +139,13 @@ export default function About() {
                   className={`about-career-entry ${exp.highlight ? 'highlight' : ''} ${exp.isEducation ? 'education' : ''}`}
                   style={{ animationDelay: `${0.6 + i * 0.1}s` }}
                 >
-                  <div className="about-career-date">{exp.period}</div>
-                  <div className="about-career-marker" />
+                  <div className="about-career-date-row">
+                    <span className="about-career-date">{exp.period}</span>
+                  </div>
+                  <div className="about-career-marker-row">
+                    <div className="about-career-marker" />
+                    <div className="about-career-marker-line" />
+                  </div>
                   <div className="about-career-content">
                     <h4 className="about-career-company">{exp.company}</h4>
                     <span className="about-career-role">{exp.role}</span>
