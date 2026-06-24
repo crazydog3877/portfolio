@@ -39,6 +39,11 @@ const skills = [
     name: '跨端适配',
     desc: '同时驾驭 PC 客户端、移动 App、Web 网站等多平台设计，保持视觉语言的一致性。',
   },
+  {
+    icon: '♢',
+    name: '美院背景',
+    desc: '湖北美术学院 · 纤维艺术设计本科。扎实的造型功底与审美素养，让设计兼具功能性与艺术感。',
+  },
 ];
 
 export default function Skills() {
