@@ -85,9 +85,14 @@ export default function ProjectDetail() {
         <nav className="detail-prevnext">
           {prevProject ? (
             <Link to={`/project/${prevProject.id}`} className="detail-pn-card prev">
-              <span className="detail-pn-label">← 上一个项目</span>
-              <span className="detail-pn-title">{prevProject.title}</span>
-              <span className="detail-pn-tag">{prevProject.tag}</span>
+              <div className={`detail-pn-thumb thumb-${prevProject.thumb}`}>
+                <span className="detail-pn-thumb-label">{prevProject.title.split('—')[0].trim()}</span>
+              </div>
+              <div className="detail-pn-info">
+                <span className="detail-pn-label">← 上一个项目</span>
+                <span className="detail-pn-title">{prevProject.title}</span>
+                <span className="detail-pn-tag">{prevProject.tag}</span>
+              </div>
             </Link>
           ) : (
             <div className="detail-pn-card empty" />
@@ -95,9 +100,14 @@ export default function ProjectDetail() {
 
           {nextProject ? (
             <Link to={`/project/${nextProject.id}`} className="detail-pn-card next">
-              <span className="detail-pn-label">下一个项目 →</span>
-              <span className="detail-pn-title">{nextProject.title}</span>
-              <span className="detail-pn-tag">{nextProject.tag}</span>
+              <div className={`detail-pn-thumb thumb-${nextProject.thumb}`}>
+                <span className="detail-pn-thumb-label">{nextProject.title.split('—')[0].trim()}</span>
+              </div>
+              <div className="detail-pn-info">
+                <span className="detail-pn-label">下一个项目 →</span>
+                <span className="detail-pn-title">{nextProject.title}</span>
+                <span className="detail-pn-tag">{nextProject.tag}</span>
+              </div>
             </Link>
           ) : (
             <div className="detail-pn-card empty" />

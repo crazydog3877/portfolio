@@ -21,6 +21,7 @@ const projectData = {
     ],
     images: [],
     videoUrl: '',
+    thumb: 'haitong',
     meta: ['PC端', '金融科技', '量化交易'],
   },
   smt: {
@@ -45,6 +46,7 @@ const projectData = {
     ],
     images: [],
     videoUrl: '',
+    thumb: 'smt',
     meta: ['PC端', '金融科技', '策略交易'],
   },
   hualong: {
@@ -69,6 +71,7 @@ const projectData = {
     ],
     images: [],
     videoUrl: '',
+    thumb: 'hualong',
     meta: ['移动端', 'PC端', '金融理财'],
   },
   haotian: {
@@ -93,6 +96,7 @@ const projectData = {
     ],
     images: [],
     videoUrl: '',
+    thumb: 'haotian',
     meta: ['Web', '移动端', '企业展示'],
   },
 };

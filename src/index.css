@@ -1033,13 +1033,12 @@ button {
 .detail-pn-card {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 28px;
   border-radius: 12px;
   border: 1px solid var(--border-subtle);
   background: var(--bg-surface);
   transition: all var(--duration-base) var(--ease-out);
   text-decoration: none;
+  overflow: hidden;
 }
 .detail-pn-card:hover {
   border-color: var(--border-standard);
@@ -1048,10 +1047,44 @@ button {
 .detail-pn-card.empty {
   visibility: hidden;
 }
-.detail-pn-card.prev {
-  align-items: flex-start;
+.detail-pn-thumb {
+  width: 100%;
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
-.detail-pn-card.next {
+.detail-pn-thumb-label {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+/* Thumb gradients per project */
+.thumb-haitong {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+}
+.thumb-smt {
+  background: linear-gradient(135deg, #0d1f22 0%, #0a3d3d 40%, #064e4e 100%);
+}
+.thumb-hualong {
+  background: linear-gradient(135deg, #1a0a2e 0%, #2d1b69 40%, #3d1f8f 100%);
+}
+.thumb-haotian {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 40%, #3d3d3d 100%);
+}
+
+.detail-pn-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px 24px 24px;
+}
+.detail-pn-card.next .detail-pn-info {
   align-items: flex-end;
   text-align: right;
 }
