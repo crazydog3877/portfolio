@@ -132,7 +132,8 @@ export default function About() {
 
           <div className="about-career-body">
             <div className="about-career-line" />
-            <div className="about-career-entries">
+            <div className="about-career-scroll">
+              <div className="about-career-entries">
               {experiences.map((exp, i) => (
                 <div
                   key={i}
@@ -152,6 +153,7 @@ export default function About() {
                   </div>
                 </div>
               ))}
+            </div>
             </div>
           </div>
         </div>
