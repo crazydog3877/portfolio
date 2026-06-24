@@ -585,7 +585,7 @@ button {
 /* Continuous line */
 .about-career-line {
   position: absolute;
-  top: 42px; left: -40px; right: -40px;
+  top: 42px; left: 0; right: 0;
   height: 1px;
   background: var(--accent-dim);
   pointer-events: none;
@@ -596,6 +596,7 @@ button {
   gap: 0;
   min-width: max-content;
   position: relative;
+  padding: 0 40px;
 }
 .about-career-entry {
   display: flex;
