@@ -560,6 +560,132 @@ button {
   letter-spacing: 0.02em;
 }
 
+/* Career timeline inside About */
+.about-career {
+  margin-top: 100px;
+  padding-top: 80px;
+  border-top: 1px solid var(--border-subtle);
+}
+.about-career-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+.about-career-icon { font-size: 18px; color: var(--accent); font-weight: 300; }
+.about-career-label { font-size: 11px; font-weight: 600; letter-spacing: 0.15em; color: var(--text-muted); text-transform: uppercase; }
+.about-career-title {
+  font-family: var(--font-display);
+  font-size: 28px; font-weight: 600;
+  color: var(--text-primary);
+  margin-left: auto;
+  letter-spacing: -0.01em;
+}
+
+.about-career-body {
+  position: relative;
+}
+.about-career-line {
+  position: absolute;
+  top: 34px; left: 0; right: 0;
+  height: 1px;
+  background: var(--accent-dim);
+  z-index: 0;
+}
+.about-career-entries {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 48px;
+}
+.about-career-entry {
+  position: relative;
+  z-index: 1;
+  padding: 16px;
+  margin: -16px;
+  border-radius: 12px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 0.6s var(--ease-out) forwards;
+}
+.about-career-entry:hover {
+  background: rgba(255, 255, 255, 0.03);
+  transform: translateY(-4px);
+}
+.about-career-date {
+  font-family: var(--font-mono);
+  font-size: 12px; font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  text-align: center;
+  padding-bottom: 24px;
+}
+.about-career-marker {
+  position: absolute;
+  top: 29px; left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 10px; height: 10px;
+  background: var(--bg-base);
+  border: 2px solid var(--accent);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+.about-career-entry:hover .about-career-marker {
+  background: var(--accent);
+  box-shadow: 0 0 14px rgba(255, 112, 35, 0.5);
+  transform: translateX(-50%) rotate(45deg) scale(1.3);
+}
+.about-career-entry.highlight .about-career-marker {
+  background: var(--accent);
+  box-shadow: 0 0 10px rgba(255, 112, 35, 0.5);
+}
+.about-career-entry.education .about-career-marker {
+  border-style: dashed; background: var(--bg-base); border-color: var(--border-standard);
+}
+.about-career-content { padding-top: 28px; }
+.about-career-company {
+  font-family: var(--font-display);
+  font-size: 15px; font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+.about-career-role {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid var(--accent-dim);
+  border-radius: 50px;
+  font-size: 11px; font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+.about-career-points {
+  list-style: none;
+  display: flex; flex-direction: column;
+  gap: 6px;
+}
+.about-career-points li {
+  font-size: 13px; line-height: 1.6;
+  color: var(--text-secondary);
+  position: relative; padding-left: 12px;
+}
+.about-career-points li::before {
+  content: '';
+  position: absolute; left: 0; top: 9px;
+  width: 4px; height: 1px;
+  background: var(--text-dim);
+}
+
+@media (max-width: 1200px) {
+  .about-career-entries { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .about-career-entries { grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+@media (max-width: 500px) {
+  .about-career-entries { grid-template-columns: 1fr; }
+}
+
 /* ============================================
    Projects Section
    ============================================ */
@@ -1184,146 +1310,9 @@ button {
 }
 
 /* ============================================
-   Timeline Section
+   Skills Section
    ============================================ */
-.timeline {
-  position: relative;
-  padding: 0 0 100px 0;
-  background: transparent;
-}
-.timeline-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-.timeline-header-icon {
-  font-size: 18px;
-  color: var(--accent);
-  font-weight: 300;
-}
-.timeline-header-title {
-  font-family: var(--font-display);
-  font-size: clamp(28px, 4vw, 42px);
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-left: auto;
-  letter-spacing: -0.01em;
-}
-
-.timeline-body {
-  position: relative;
-  margin-top: 40px;
-}
-.timeline-line-h {
-  position: absolute;
-  top: 36px;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: var(--accent-dim);
-  z-index: 0;
-}
-.timeline-entries {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 40px;
-}
-.timeline-entry {
-  position: relative;
-  z-index: 1;
-}
-.timeline-entry-date {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--accent);
-  letter-spacing: 0.05em;
-  text-align: center;
-  padding-bottom: 28px;
-}
-.timeline-marker {
-  position: absolute;
-  top: 31px;
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-  width: 10px;
-  height: 10px;
-  background: var(--bg-base);
-  border: 2px solid var(--accent);
-  z-index: 2;
-}
-.timeline-entry.highlight .timeline-marker {
-  background: var(--accent);
-  box-shadow: 0 0 10px rgba(255, 112, 35, 0.5);
-}
-.timeline-entry.education .timeline-marker {
-  border-style: dashed;
-  background: var(--bg-base);
-  border-color: var(--border-standard);
-}
-
-.timeline-entry-content {
-  padding-top: 32px;
-}
-.timeline-entry-company {
-  font-family: var(--font-display);
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 8px;
-  letter-spacing: -0.01em;
-  line-height: 1.3;
-}
-.timeline-entry-role {
-  display: inline-block;
-  padding: 4px 12px;
-  border: 1px solid var(--accent-dim);
-  border-radius: 50px;
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--accent);
-  margin-bottom: 14px;
-}
-.timeline-entry-points {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.timeline-entry-points li {
-  font-size: 13px;
-  line-height: 1.6;
-  color: var(--text-secondary);
-  position: relative;
-  padding-left: 12px;
-}
-.timeline-entry-points li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 9px;
-  width: 4px;
-  height: 1px;
-  background: var(--text-dim);
-}
-
-@media (max-width: 1200px) {
-  .timeline-entries {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (max-width: 768px) {
-  .timeline-entries {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
-}
-@media (max-width: 500px) {
-  .timeline-entries {
-    grid-template-columns: 1fr;
-  }
-}
+.skills {
 
 /* ============================================
    Grainient Background

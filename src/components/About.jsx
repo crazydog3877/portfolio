@@ -1,12 +1,66 @@
 import TiltedCard from './TiltedCard';
 
+const experiences = [
+  {
+    period: '2021.09 - 至今',
+    company: '武汉优品楚鼎科技有限公司',
+    role: 'UI 设计师',
+    points: [
+      '负责产品视觉信息传达与视觉语言定义，含视觉、动效、交互等多样化设计输出',
+      '参与兴业证券 SMT-Q、华龙 App、华安综合 App、量化终端 PC 及券商投顾模块设计',
+      '协同开发跟进，保证项目最终上线效果',
+    ],
+    highlight: true,
+  },
+  {
+    period: '2019.06 - 2021.09',
+    company: '武汉网盾科技有限公司',
+    role: 'UI 设计师',
+    points: [
+      '负责产品界面整体美术风格与界面结构设计',
+      '参与产品视觉、动效、流程优化工作',
+      '负责公众号运营、网站整体架构与 UI 设计、宣传册与平面设计',
+    ],
+  },
+  {
+    period: '2017.12 - 2019.05',
+    company: '武汉东湖高新区管委会',
+    role: '安全员',
+    points: [
+      '负责高新区各类生产经营单位、公共场所的安全监督检查',
+      '组织安全培训与教育活动，参与制定应急预案并定期组织演练',
+    ],
+  },
+  {
+    period: '2015.09 - 2017.09',
+    company: '中国人民解放军陆军某部',
+    role: '反坦克火箭射手 / 短片制作',
+    points: [
+      '承担反坦克火箭射手及步枪手职责，全身心投入日常军事训练',
+      '参与解放军某活动短片制作，作品荣获战区一等奖，获优秀义务兵称号',
+    ],
+  },
+  {
+    period: '2011 - 2015',
+    company: '湖北美术学院',
+    role: '纤维艺术设计 · 本科',
+    points: [
+      '曾担任班长、学生会副主席，获优秀学生干部',
+      '扎实的造型功底与审美素养，为设计生涯奠定基础',
+    ],
+    isEducation: true,
+  },
+];
+
 export default function About() {
   return (
     <section className="about" id="about">
       <div className="container">
         <span className="section-label">About</span>
+        <h2 className="section-title">关于我</h2>
+
+        {/* Profile grid */}
         <div className="about-grid stagger">
-          {/* Visual side — 3D tilted card */}
           <div className="about-visual">
             <div className="about-tilt-wrapper">
               <TiltedCard
@@ -25,7 +79,6 @@ export default function About() {
             </div>
           </div>
 
-          {/* Info side */}
           <div className="about-info">
             <h2 className="about-name">
               沈震霄<span>.</span>
@@ -65,6 +118,40 @@ export default function About() {
                 <div className="about-stat-value">0→1</div>
                 <div className="about-stat-label">全流程</div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Career timeline — inside About */}
+        <div className="about-career">
+          <div className="about-career-header">
+            <span className="about-career-icon">+</span>
+            <span className="about-career-label">Career Path</span>
+            <h3 className="about-career-title">工作经历</h3>
+          </div>
+
+          <div className="about-career-body">
+            <div className="about-career-line" />
+            <div className="about-career-entries">
+              {experiences.map((exp, i) => (
+                <div
+                  key={i}
+                  className={`about-career-entry ${exp.highlight ? 'highlight' : ''} ${exp.isEducation ? 'education' : ''}`}
+                  style={{ animationDelay: `${0.6 + i * 0.1}s` }}
+                >
+                  <div className="about-career-date">{exp.period}</div>
+                  <div className="about-career-marker" />
+                  <div className="about-career-content">
+                    <h4 className="about-career-company">{exp.company}</h4>
+                    <span className="about-career-role">{exp.role}</span>
+                    <ul className="about-career-points">
+                      {exp.points.map((p, j) => (
+                        <li key={j}>{p}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
