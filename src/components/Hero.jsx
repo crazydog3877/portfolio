@@ -4,9 +4,9 @@ export default function Hero() {
   return (
     <section className="hero" id="hero">
       <Aurora
-        colorStops={['#1a0a2e', '#c9a574', '#0d4a4a']}
-        blend={0.6}
-        amplitude={1.4}
+        colorStops={['#3d1f8f', '#c9a574', '#0d7377']}
+        blend={0.8}
+        amplitude={1.6}
         speed={0.3}
       />
       <div className="hero-overlay" />

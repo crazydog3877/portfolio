@@ -313,7 +313,7 @@ button {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 70%, rgba(5,5,8,0.15) 0%, rgba(5,5,8,0.55) 100%);
+  background: radial-gradient(ellipse at 50% 75%, rgba(5,5,8,0.05) 0%, rgba(5,5,8,0.4) 100%);
   z-index: 1;
 }
 .hero-content {
