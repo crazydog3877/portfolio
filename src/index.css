@@ -570,11 +570,34 @@ button {
   border: 1px solid var(--border-subtle);
   background: var(--bg-surface);
   cursor: pointer;
-  transition: all var(--duration-slow) var(--ease-out);
+  transition: all 0.4s var(--ease-out);
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.project-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  box-shadow:
+    0 0 0 1px var(--accent),
+    0 0 30px rgba(255, 112, 35, 0.15),
+    0 0 60px rgba(255, 112, 35, 0.05);
+  pointer-events: none;
+  z-index: 2;
 }
 .project-card:hover {
-  border-color: var(--border-standard);
-  transform: translateY(-4px);
+  border-color: var(--accent-dim);
+  transform: translateY(-6px) scale(1.02);
+}
+.project-card:hover::after {
+  opacity: 1;
+}
+.project-card:hover .project-image-inner {
+  transform: scale(1.05);
 }
 .project-image {
   width: 100%;
@@ -591,6 +614,7 @@ button {
   justify-content: center;
   background: linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-elevated) 100%);
   position: relative;
+  transition: transform 0.4s var(--ease-out);
 }
 .project-image-accent {
   position: absolute;
