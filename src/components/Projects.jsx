@@ -5,7 +5,6 @@ const projects = [
     tag: '量化交易平台',
     desc: '为量化交易客户量身定制的专业平台，集行情显示、策略研究、策略编写、策略执行、极速交易、合规风控于一体。负责从用户研究到UI规范制定的全链路设计。',
     meta: ['PC端', '金融科技', '2023-至今'],
-    featured: true,
     accent: 'gold',
   },
   {
@@ -14,7 +13,6 @@ const projects = [
     tag: '策略交易终端',
     desc: '集行情数据、投资研究、策略编写、极速交易、智能算法于一体的专业策略交易平台，为私募管理人及高净值客户量身定制。',
     meta: ['PC端', '金融科技', '2022-至今'],
-    featured: false,
     accent: 'cyan',
   },
   {
@@ -23,7 +21,6 @@ const projects = [
     tag: '移动 & PC 双端',
     desc: '负责整体视觉设计，确保移动端与PC端视觉一致性。优化港股通、基金定投、华龙理财等核心功能界面，提升用户体验。',
     meta: ['移动端', 'PC端', '2021-至今'],
-    featured: false,
     accent: 'gold',
   },
   {
@@ -32,14 +29,13 @@ const projects = [
     tag: '企业展示网站',
     desc: '企业展示型网站设计，包含PC端和移动端。从交互界面到网页视觉的整体美术设计，配合前后端完成项目落地。',
     meta: ['Web', '移动端', '2019'],
-    featured: false,
     accent: 'cyan',
   },
 ];
 
 function ProjectCard({ project }) {
   return (
-    <div className={`project-card ${project.featured ? 'featured' : ''}`}>
+    <div className="project-card">
       <div className="project-image">
         <div className="project-image-inner">
           <div className={`project-image-accent ${project.accent}`} />
@@ -61,9 +57,6 @@ function ProjectCard({ project }) {
 }
 
 export default function Projects() {
-  const featured = projects.filter((p) => p.featured);
-  const rest = projects.filter((p) => !p.featured);
-
   return (
     <section className="projects grid-bg" id="projects">
       <div className="container">
@@ -76,10 +69,7 @@ export default function Projects() {
         </div>
 
         <div className="projects-grid stagger">
-          {featured.map((p) => (
-            <ProjectCard key={p.id} project={p} />
-          ))}
-          {rest.map((p) => (
+          {projects.map((p) => (
             <ProjectCard key={p.id} project={p} />
           ))}
         </div>
