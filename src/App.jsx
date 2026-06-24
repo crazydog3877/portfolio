@@ -16,21 +16,21 @@ export default function App() {
         <div className="grainient-bg-wrapper">
           <Grainient
             color1="#FF7023"
-            color2="#050508"
-            color3="#1a0a2e"
+            color2="#0a0b0f"
+            color3="#2d1b69"
             timeSpeed={0.15}
-            warpStrength={0.6}
-            warpFrequency={3.0}
-            warpSpeed={1.0}
-            warpAmplitude={80.0}
+            warpStrength={1.0}
+            warpFrequency={4.0}
+            warpSpeed={1.5}
+            warpAmplitude={60.0}
             blendAngle={35.0}
-            blendSoftness={0.08}
-            rotationAmount={300.0}
-            noiseScale={1.5}
-            grainAmount={0.04}
-            grainScale={1.5}
-            contrast={1.3}
-            saturation={1.0}
+            blendSoftness={0.12}
+            rotationAmount={400.0}
+            noiseScale={2.0}
+            grainAmount={0.06}
+            grainScale={2.0}
+            contrast={1.5}
+            saturation={1.2}
             zoom={1.0}
           />
         </div>

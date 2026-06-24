@@ -447,7 +447,7 @@ button {
 .about {
   position: relative;
   padding: var(--section-padding) 0;
-  background: var(--bg-base);
+  background: transparent;
 }
 .about-grid {
   display: grid;
@@ -566,7 +566,7 @@ button {
 .projects {
   position: relative;
   padding: var(--section-padding) 0;
-  background: var(--bg-deep);
+  background: transparent;
 }
 .projects-header {
   margin-bottom: 80px;
@@ -714,7 +714,7 @@ button {
 .skills {
   position: relative;
   padding: 0 0 var(--section-padding) 0;
-  background: var(--bg-base);
+  background: transparent;
   margin-top: -1px;
 }
 .skills-header {
@@ -780,7 +780,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-deep);
+  background: transparent;
   overflow: hidden;
 }
 .contact-bg {
@@ -1189,7 +1189,7 @@ button {
 .timeline {
   position: relative;
   padding: 0 0 100px 0;
-  background: var(--bg-base);
+  background: transparent;
 }
 .timeline-header {
   display: flex;
@@ -1333,7 +1333,7 @@ button {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.35;
+  opacity: 0.7;
 }
 .content-sections {
   position: relative;
