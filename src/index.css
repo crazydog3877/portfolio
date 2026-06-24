@@ -287,7 +287,7 @@ button {
 }
 .navbar-cta {
   padding: 10px 22px;
-  background: var(--accent);
+  background: #ffffff;
   color: #0a0b0f;
   font-size: 14px;
   font-weight: 500;
@@ -297,9 +297,9 @@ button {
   flex-shrink: 0;
 }
 .navbar-cta:hover {
-  background: var(--accent-hover);
+  background: #e5e5e5;
   transform: translateY(-1px);
-  box-shadow: 0 4px 20px rgba(255, 112, 35, 0.3);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
 }
 
 @media (max-width: 768px) {
