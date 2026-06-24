@@ -582,25 +582,6 @@ button {
 }
 .about-career-scroll::-webkit-scrollbar { display: none; }
 
-/* Fade edges on scroll container */
-.about-career-scroll::before,
-.about-career-scroll::after {
-  content: '';
-  position: absolute;
-  top: 0; bottom: 0;
-  width: 40px;
-  z-index: 5;
-  pointer-events: none;
-}
-.about-career-scroll::before {
-  left: 0;
-  background: linear-gradient(90deg, #0a0b0f 0%, rgba(10,11,15,0.6) 50%, transparent 100%);
-}
-.about-career-scroll::after {
-  right: 0;
-  background: linear-gradient(270deg, #0a0b0f 0%, rgba(10,11,15,0.6) 50%, transparent 100%);
-}
-
 /* Continuous line */
 .about-career-line {
   position: absolute;
