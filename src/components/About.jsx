@@ -176,8 +176,8 @@ export default function About() {
           </div>
 
           <div className="about-career-body">
+            <div className="about-career-line" />
             <div className="about-career-scroll" ref={scrollRef}>
-              <div className="about-career-line" />
               <div className="about-career-entries">
               {experiences.map((exp, i) => (
                 <div

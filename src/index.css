@@ -585,10 +585,9 @@ button {
 /* Continuous line */
 .about-career-line {
   position: absolute;
-  top: 42px; left: 0; right: 0;
+  top: 42px; left: -40px; right: -40px;
   height: 1px;
   background: var(--accent-dim);
-  min-width: max-content;
 }
 
 .about-career-entries {
