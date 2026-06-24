@@ -1339,7 +1339,7 @@ button {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(5, 5, 8, 0.55);
+  background: rgba(5, 5, 8, 0.7);
   z-index: 1;
 }
 .content-sections {
