@@ -418,6 +418,10 @@ button {
   max-width: 420px;
   border-radius: 24px;
   overflow: hidden;
+  perspective: 800px;
+}
+.about-tilt-wrapper .tilted-card-figure {
+  perspective: none;
 }
 .about-tilt-wrapper .tilted-card-img {
   border-radius: 24px;
