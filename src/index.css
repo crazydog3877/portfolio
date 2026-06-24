@@ -681,8 +681,9 @@ button {
    ============================================ */
 .skills {
   position: relative;
-  padding: var(--section-padding) 0;
+  padding: 0 0 var(--section-padding) 0;
   background: var(--bg-base);
+  margin-top: -1px;
 }
 .skills-header {
   margin-bottom: 80px;
