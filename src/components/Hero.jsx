@@ -1,12 +1,4 @@
 import Aurora from './Aurora';
-import CircularGallery from './CircularGallery';
-
-const galleryItems = [
-  { image: 'https://picsum.photos/seed/trading/800/600', text: '' },
-  { image: 'https://picsum.photos/seed/finance/800/600', text: '' },
-  { image: 'https://picsum.photos/seed/app/800/600', text: '' },
-  { image: 'https://picsum.photos/seed/website/800/600', text: '' },
-];
 
 export default function Hero() {
   return (
@@ -43,16 +35,9 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="hero-gallery">
-        <CircularGallery
-          items={galleryItems}
-          bend={1.5}
-          textColor="#FF7023"
-          borderRadius={0.08}
-          scrollSpeed={2.5}
-          scrollEase={0.06}
-          font="bold 18px Inter"
-        />
+      <div className="hero-scroll">
+        <span>Scroll</span>
+        <div className="hero-scroll-line" />
       </div>
     </section>
   );

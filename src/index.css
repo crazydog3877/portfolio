@@ -331,22 +331,10 @@ button {
 .hero {
   position: relative;
   height: 100vh;
-  min-height: 800px;
+  min-height: 700px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
   overflow: hidden;
-}
-.hero-gallery {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 25%;
-  z-index: 2;
-}
-.hero-gallery .circular-gallery {
-  cursor: grab;
 }
 .hero-canvas,
 .hero .aurora-container {
