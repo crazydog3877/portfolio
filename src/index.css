@@ -304,7 +304,8 @@ button {
   align-items: center;
   overflow: hidden;
 }
-.hero-canvas {
+.hero-canvas,
+.hero .aurora-container {
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -312,8 +313,7 @@ button {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 30% 50%, rgba(201, 165, 116, 0.06) 0%, transparent 50%),
-              radial-gradient(ellipse at 70% 20%, rgba(78, 205, 196, 0.04) 0%, transparent 40%);
+  background: radial-gradient(ellipse at 50% 70%, rgba(5,5,8,0.15) 0%, rgba(5,5,8,0.55) 100%);
   z-index: 1;
 }
 .hero-content {

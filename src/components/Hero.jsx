@@ -1,85 +1,14 @@
-import { useEffect, useRef } from 'react';
+import Aurora from './Aurora';
 
 export default function Hero() {
-  const canvasRef = useRef(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-
-    let w, h;
-    const particles = [];
-    const maxParticles = 80;
-
-    function resize() {
-      w = canvas.width = canvas.offsetWidth;
-      h = canvas.height = canvas.offsetHeight;
-    }
-    resize();
-    window.addEventListener('resize', resize);
-
-    // Create particles
-    for (let i = 0; i < maxParticles; i++) {
-      particles.push({
-        x: Math.random() * w,
-        y: Math.random() * h,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
-        radius: Math.random() * 1.5 + 0.5,
-        alpha: Math.random() * 0.4 + 0.1,
-        color: Math.random() > 0.7 ? '201, 165, 116' : '78, 205, 196',
-      });
-    }
-
-    const connections = [];
-
-    function draw() {
-      ctx.clearRect(0, 0, w, h);
-
-      // Update & draw particles
-      for (const p of particles) {
-        p.x += p.vx;
-        p.y += p.vy;
-        if (p.x < 0) p.x = w;
-        if (p.x > w) p.x = 0;
-        if (p.y < 0) p.y = h;
-        if (p.y > h) p.y = 0;
-
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${p.color}, ${p.alpha})`;
-        ctx.fill();
-      }
-
-      // Draw connections between nearby particles
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 180) {
-            const alpha = (1 - dist / 180) * 0.08;
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
-            ctx.lineWidth = 0.5;
-            ctx.stroke();
-          }
-        }
-      }
-
-      requestAnimationFrame(draw);
-    }
-    draw();
-
-    return () => window.removeEventListener('resize', resize);
-  }, []);
-
   return (
     <section className="hero" id="hero">
-      <canvas ref={canvasRef} className="hero-canvas" />
+      <Aurora
+        colorStops={['#1a0a2e', '#c9a574', '#0d4a4a']}
+        blend={0.6}
+        amplitude={1.4}
+        speed={0.3}
+      />
       <div className="hero-overlay" />
 
       <div className="hero-content">
