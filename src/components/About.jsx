@@ -1,15 +1,27 @@
+import TiltedCard from './TiltedCard';
+
 export default function About() {
   return (
     <section className="about" id="about">
       <div className="container">
         <span className="section-label">About</span>
         <div className="about-grid stagger">
-          {/* Visual side */}
+          {/* Visual side — 3D tilted card */}
           <div className="about-visual">
-            <div className="about-avatar-frame">
-              <div className="about-avatar-placeholder">
-                <span className="about-avatar-initials">沈</span>
-              </div>
+            <div className="about-tilt-wrapper">
+              <TiltedCard
+                imageSrc="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&h=750&fit=crop&q=80"
+                altText="沈震霄"
+                captionText="沈震霄 — Designer"
+                containerHeight="100%"
+                containerWidth="100%"
+                imageHeight="100%"
+                imageWidth="100%"
+                rotateAmplitude={8}
+                scaleOnHover={1.05}
+                showMobileWarning={false}
+                showTooltip={true}
+              />
             </div>
             <div className="about-accent-box" />
             <div className="about-accent-dot" />
