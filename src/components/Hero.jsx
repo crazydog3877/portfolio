@@ -6,10 +6,6 @@ const galleryItems = [
   { image: 'https://picsum.photos/seed/finance/800/600', text: '' },
   { image: 'https://picsum.photos/seed/app/800/600', text: '' },
   { image: 'https://picsum.photos/seed/website/800/600', text: '' },
-  { image: 'https://picsum.photos/seed/dashboard/800/600', text: '' },
-  { image: 'https://picsum.photos/seed/chart/800/600', text: '' },
-  { image: 'https://picsum.photos/seed/mobile/800/600', text: '' },
-  { image: 'https://picsum.photos/seed/brand/800/600', text: '' },
 ];
 
 export default function Hero() {
