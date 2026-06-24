@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const projects = [
   {
     id: 'haitong',
@@ -35,7 +37,7 @@ const projects = [
 
 function ProjectCard({ project }) {
   return (
-    <div className="project-card">
+    <Link to={`/project/${project.id}`} className="project-card">
       <div className="project-image">
         <div className="project-image-inner">
           <div className={`project-image-accent ${project.accent}`} />
@@ -52,7 +54,7 @@ function ProjectCard({ project }) {
           ))}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

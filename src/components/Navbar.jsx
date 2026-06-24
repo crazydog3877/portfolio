@@ -1,17 +1,17 @@
 import { useState, useEffect } from 'react';
 
 const navItems = [
-  { label: '关于', href: '#about', id: 'about' },
-  { label: '能力', href: '#skills', id: 'skills' },
-  { label: '项目', href: '#projects', id: 'projects' },
-  { label: '联系', href: '#contact', id: 'contact' },
+  { label: '关于', href: '/#about', id: 'about' },
+  { label: '能力', href: '/#skills', id: 'skills' },
+  { label: '项目', href: '/#projects', id: 'projects' },
+  { label: '联系', href: '/#contact', id: 'contact' },
 ];
 
 export default function Navbar() {
   const [active, setActive] = useState('');
 
   useEffect(() => {
-    const sections = navItems.map((item) => document.querySelector(item.href)).filter(Boolean);
+    const sections = navItems.map((item) => document.getElementById(item.id)).filter(Boolean);
 
     const onScroll = () => {
       const scrollY = window.scrollY + 120;
@@ -31,7 +31,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-pill">
-        <a href="#" className="navbar-logo">
+        <a href="/" className="navbar-logo">
           <span>S</span>hen
         </a>
 
@@ -48,7 +48,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <a href="#contact" className="navbar-cta">联系我</a>
+        <a href="/#contact" className="navbar-cta">联系我</a>
       </div>
     </nav>
   );

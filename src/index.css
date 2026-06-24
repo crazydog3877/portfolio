@@ -834,3 +834,201 @@ button {
     gap: 12px;
   }
 }
+
+/* ============================================
+   Project Detail Page
+   ============================================ */
+.detail-page {
+  min-height: 100vh;
+  background: var(--bg-deep);
+  padding: 100px 0 var(--section-padding);
+}
+
+.detail-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 0;
+  margin-left: 60px;
+  margin-bottom: 60px;
+  transition: color var(--duration-fast) ease;
+}
+.detail-back:hover {
+  color: var(--text-primary);
+}
+
+.detail-article {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.detail-header {
+  margin-bottom: 60px;
+}
+.detail-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin: 16px 0 20px;
+}
+.detail-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.detail-meta-item {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+.detail-meta-divider {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--text-dim);
+}
+.detail-overview {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+.detail-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.detail-tag {
+  font-size: 12px;
+  color: var(--text-muted);
+  padding: 4px 12px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+}
+
+.detail-cover {
+  margin-bottom: 80px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+.detail-cover-placeholder {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: var(--bg-surface);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--text-dim);
+}
+.detail-cover-placeholder span {
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--text-muted);
+}
+
+.detail-section {
+  margin-bottom: 60px;
+}
+.detail-section-heading {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+.detail-section-text {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--text-secondary);
+}
+
+.detail-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.detail-gallery-item {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  transition: border-color var(--duration-fast) ease;
+}
+.detail-gallery-item:hover {
+  border-color: var(--border-standard);
+}
+.detail-gallery-placeholder {
+  width: 100%;
+  aspect-ratio: 16/10;
+  background: var(--bg-surface);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: background var(--duration-fast) ease;
+}
+.detail-gallery-placeholder:hover {
+  background: var(--bg-elevated);
+}
+
+.detail-video {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+.detail-video-placeholder {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: var(--bg-surface);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: var(--text-dim);
+}
+.detail-video-hint {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.detail-not-found {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: var(--bg-deep);
+  color: var(--text-primary);
+}
+.detail-not-found a {
+  color: var(--accent);
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .detail-back {
+    margin-left: 24px;
+  }
+  .detail-article {
+    padding: 0 24px;
+  }
+  .detail-gallery {
+    grid-template-columns: 1fr;
+  }
+}
