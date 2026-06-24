@@ -39,15 +39,15 @@ export default function Skills() {
           {skills.map((skill, i) => (
             <BorderGlow
               key={i}
-              edgeSensitivity={35}
+              edgeSensitivity={20}
               glowColor="30 100 60"
               backgroundColor="#0f1015"
               borderRadius={12}
-              glowRadius={30}
-              glowIntensity={0.8}
-              coneSpread={20}
+              glowRadius={50}
+              glowIntensity={1.8}
+              coneSpread={30}
               colors={['#FF9900', '#FFAD33', '#06B6D4']}
-              fillOpacity={0.3}
+              fillOpacity={0.5}
             >
               <div className="skill-card">
                 <div className="skill-icon">{skill.icon}</div>
