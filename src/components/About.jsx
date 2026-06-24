@@ -23,8 +23,6 @@ export default function About() {
                 showTooltip={true}
               />
             </div>
-            <div className="about-accent-box" />
-            <div className="about-accent-dot" />
           </div>
 
           {/* Info side */}
