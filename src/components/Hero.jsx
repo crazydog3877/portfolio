@@ -1,4 +1,16 @@
 import Aurora from './Aurora';
+import CircularGallery from './CircularGallery';
+
+const galleryItems = [
+  { image: 'https://picsum.photos/seed/trading/800/600', text: '海通证券 — e海方舟' },
+  { image: 'https://picsum.photos/seed/finance/800/600', text: '兴业证券 SMT-Q V5.0' },
+  { image: 'https://picsum.photos/seed/app/800/600', text: '华龙点金智慧版' },
+  { image: 'https://picsum.photos/seed/website/800/600', text: '皓天智通企业官网' },
+  { image: 'https://picsum.photos/seed/dashboard/800/600', text: '海通证券 — e海方舟' },
+  { image: 'https://picsum.photos/seed/chart/800/600', text: '兴业证券 SMT-Q V5.0' },
+  { image: 'https://picsum.photos/seed/mobile/800/600', text: '华龙点金智慧版' },
+  { image: 'https://picsum.photos/seed/brand/800/600', text: '皓天智通企业官网' },
+];
 
 export default function Hero() {
   return (
@@ -23,8 +35,8 @@ export default function Hero() {
           从0到1打造专业策略交易平台，让复杂数据变得优雅可视。
         </p>
         <div className="hero-actions">
-          <a href="#projects" className="btn-primary">
-            查看作品
+          <a href="#about" className="btn-primary">
+            了解更多
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
@@ -35,9 +47,16 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="hero-scroll">
-        <span>Scroll</span>
-        <div className="hero-scroll-line" />
+      <div className="hero-gallery">
+        <CircularGallery
+          items={galleryItems}
+          bend={1.5}
+          textColor="#FF7023"
+          borderRadius={0.08}
+          scrollSpeed={2.5}
+          scrollEase={0.06}
+          font="bold 18px Inter"
+        />
       </div>
     </section>
   );
