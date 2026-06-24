@@ -1,3 +1,5 @@
+import BorderGlow from './BorderGlow';
+
 const skills = [
   {
     icon: '◈',
@@ -33,13 +35,26 @@ export default function Skills() {
           </p>
         </div>
 
-        <div className="skills-grid stagger">
+        <div className="skills-grid">
           {skills.map((skill, i) => (
-            <div key={i} className="skill-card">
-              <div className="skill-icon">{skill.icon}</div>
-              <h3 className="skill-name">{skill.name}</h3>
-              <p className="skill-desc">{skill.desc}</p>
-            </div>
+            <BorderGlow
+              key={i}
+              edgeSensitivity={35}
+              glowColor="30 100 60"
+              backgroundColor="#0f1015"
+              borderRadius={12}
+              glowRadius={30}
+              glowIntensity={0.8}
+              coneSpread={20}
+              colors={['#FF9900', '#FFAD33', '#06B6D4']}
+              fillOpacity={0.3}
+            >
+              <div className="skill-card">
+                <div className="skill-icon">{skill.icon}</div>
+                <h3 className="skill-name">{skill.name}</h3>
+                <p className="skill-desc">{skill.desc}</p>
+              </div>
+            </BorderGlow>
           ))}
         </div>
       </div>

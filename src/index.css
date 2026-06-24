@@ -705,30 +705,7 @@ button {
 }
 .skill-card {
   padding: 40px 28px;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: 8px;
-  transition: all var(--duration-base) var(--ease-out);
   position: relative;
-  overflow: hidden;
-}
-.skill-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-dim), transparent);
-  opacity: 0;
-  transition: opacity var(--duration-base) ease;
-}
-.skill-card:hover {
-  border-color: var(--border-standard);
-  transform: translateY(-2px);
-}
-.skill-card:hover::before {
-  opacity: 1;
 }
 .skill-icon {
   font-size: 32px;
