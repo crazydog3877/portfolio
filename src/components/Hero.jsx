@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="hero" id="hero">
       <Aurora
-        colorStops={['#2d1b69', '#c9a574', '#0d7377']}
+        colorStops={['#2d1b69', '#FF9900', '#0d7377']}
         blend={0.5}
         amplitude={1.5}
         speed={0.3}
