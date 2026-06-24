@@ -100,10 +100,6 @@ export default function Skills() {
             <SkillCard key={skill.num} skill={skill} />
           ))}
         </div>
-
-        <div className="skills-footer-tag">
-          使用 AI 工具解决问题的能力
-        </div>
       </div>
     </section>
   );

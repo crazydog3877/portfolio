@@ -889,8 +889,6 @@ button {
   border-radius: 50%; pointer-events: none;
 }
 .skill-new-sparkle { font-size: 36px; color: var(--accent); filter: drop-shadow(0 0 8px rgba(255, 112, 35, 0.4)); }
-.skills-footer-tag { text-align: center; padding: 48px 0 24px; border-top: 1px solid var(--border-subtle); }
-.skills-footer-tag::after { content: ''; display: block; width: 100%; max-width: 800px; margin: 12px auto 0; height: 2px; background: linear-gradient(90deg, transparent, var(--accent), transparent); border-radius: 1px; }
 @media (max-width: 900px) { .skills-core-row, .skills-system-row { grid-template-columns: 1fr; } }
 
 /* ============================================
