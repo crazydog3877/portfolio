@@ -648,7 +648,7 @@ button {
 }
 
 /* Content */
-.about-career-content { padding-top: 24px; width: 240px; }
+.about-career-content { padding-top: 24px; width: 280px; }
 .about-career-company {
   font-family: var(--font-display);
   font-size: 15px; font-weight: 600;
