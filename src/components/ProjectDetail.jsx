@@ -54,32 +54,19 @@ export default function ProjectDetail() {
           </section>
         ))}
 
-        {/* Image gallery — placeholder */}
-        <section className="detail-section">
-          <h2 className="detail-section-heading">界面展示</h2>
-          <div className="detail-gallery">
-            <div className="detail-gallery-item">
-              <div className="detail-gallery-placeholder">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round">
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                  <circle cx="8.5" cy="8.5" r="1.5"/>
-                  <polyline points="21,15 16,10 5,21"/>
-                </svg>
-                <span>待上传截图</span>
-              </div>
+        {/* Image gallery */}
+        {project.images && project.images.length > 0 && (
+          <section className="detail-section">
+            <h2 className="detail-section-heading">界面展示</h2>
+            <div className="detail-gallery">
+              {project.images.map((img, i) => (
+                <div key={i} className="detail-gallery-item filled">
+                  <img src={img} alt={`${project.title} - ${i + 1}`} />
+                </div>
+              ))}
             </div>
-            <div className="detail-gallery-item">
-              <div className="detail-gallery-placeholder">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round">
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                  <circle cx="8.5" cy="8.5" r="1.5"/>
-                  <polyline points="21,15 16,10 5,21"/>
-                </svg>
-                <span>待上传截图</span>
-              </div>
-            </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* Prev / Next navigation */}
         <nav className="detail-prevnext">
