@@ -999,8 +999,14 @@ button {
 }
 .contact-card-item {
   display: flex;
-  align-items: baseline;
-  gap: 14px;
+  align-items: center;
+  gap: 10px;
+}
+.contact-card-icon {
+  font-size: 18px;
+  color: var(--accent);
+  width: 24px;
+  text-align: center;
 }
 .contact-card-key {
   font-size: 14px;

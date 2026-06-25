@@ -31,14 +31,17 @@ export default function Contact() {
 
               <div className="contact-card-items">
                 <div className="contact-card-item">
+                  <i className="ri-smartphone-line contact-card-icon" />
                   <span className="contact-card-key">手机</span>
                   <span className="contact-card-val">185-7148-7848</span>
                 </div>
                 <div className="contact-card-item">
+                  <i className="ri-wechat-line contact-card-icon" />
                   <span className="contact-card-key">微信</span>
                   <span className="contact-card-val">shenzhen_3877</span>
                 </div>
                 <div className="contact-card-item">
+                  <i className="ri-mail-line contact-card-icon" />
                   <span className="contact-card-key">邮箱</span>
                   <span className="contact-card-val">shenzhen_3877@qq.com</span>
                 </div>
