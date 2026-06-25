@@ -28,7 +28,7 @@ export default function Contact() {
 
           {/* Right — contact card */}
           <div className="contact-right">
-            <SpotlightCard className="contact-card" spotlightColor="rgba(255, 112, 35, 0.15)">
+            <SpotlightCard className="contact-card" spotlightColor="rgba(255, 112, 35, 0.25)">
               <span className="contact-card-label">CONTACT</span>
 
               <div className="contact-card-items">
