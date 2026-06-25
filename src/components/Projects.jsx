@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import SpotlightCard from './SpotlightCard';
 
 const projects = [
   {
@@ -37,6 +38,7 @@ const projects = [
 
 function ProjectCard({ project }) {
   return (
+    <SpotlightCard className="project-card-wrapper" spotlightColor="rgba(255, 112, 35, 0.12)">
     <Link to={`/project/${project.id}`} className="project-card">
       <div className="project-image">
         <div className="project-image-inner">
@@ -55,6 +57,7 @@ function ProjectCard({ project }) {
         </div>
       </div>
     </Link>
+    </SpotlightCard>
   );
 }
 

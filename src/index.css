@@ -713,6 +713,14 @@ button {
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
+.project-card-wrapper {
+  border-radius: 8px;
+}
+.project-card-wrapper .card-spotlight {
+  padding: 0;
+  border: none;
+  background: none;
+}
 .project-card {
   position: relative;
   border-radius: 8px;
