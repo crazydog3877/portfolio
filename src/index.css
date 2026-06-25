@@ -1064,10 +1064,11 @@ button {
   display: block;
 }
 .contact-qr-label {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--accent);
-  letter-spacing: 0.05em;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.02em;
 }
 .contact-footer {
   position: absolute;
