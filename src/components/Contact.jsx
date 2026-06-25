@@ -48,17 +48,7 @@ export default function Contact() {
 
               <div className="contact-qr-wrap">
                 <div className="contact-qr-code">
-                  <div className="contact-qr-placeholder">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-                      <rect x="3" y="3" width="7" height="7" />
-                      <rect x="14" y="3" width="7" height="7" />
-                      <rect x="3" y="14" width="7" height="7" />
-                      <rect x="14" y="14" width="3" height="3" />
-                      <rect x="18" y="14" width="3" height="3" />
-                      <rect x="14" y="18" width="3" height="3" />
-                      <rect x="18" y="18" width="3" height="3" />
-                    </svg>
-                  </div>
+                  <img src="/qrcode.png" alt="微信二维码" className="contact-qr-img" />
                 </div>
                 <p className="contact-qr-label">WeChat · 微信扫码</p>
               </div>
