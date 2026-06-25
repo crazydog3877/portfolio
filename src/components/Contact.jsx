@@ -53,7 +53,7 @@ export default function Contact() {
                 <div className="contact-qr-code">
                   <img src="/qrcode.png" alt="微信二维码" className="contact-qr-img" />
                 </div>
-                <p className="contact-qr-label">WeChat · 微信扫码</p>
+                <p className="contact-qr-label">扫一扫添加微信</p>
               </div>
             </div>
           </div>
