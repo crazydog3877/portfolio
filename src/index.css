@@ -910,12 +910,11 @@ button {
    ============================================ */
 .contact {
   position: relative;
-  min-height: 100vh;
+  padding: var(--section-padding) 0 120px;
   display: flex;
   align-items: center;
   background: var(--bg-deep);
   overflow: hidden;
-  padding: var(--section-padding) 0 100px;
 }
 .contact-bg {
   position: absolute;
@@ -948,7 +947,7 @@ button {
 }
 .contact-headline {
   font-family: var(--font-display);
-  font-size: clamp(36px, 5vw, 60px);
+  font-size: clamp(48px, 6vw, 80px);
   font-weight: 700;
   line-height: 1.05;
   letter-spacing: -0.02em;
@@ -977,47 +976,47 @@ button {
 }
 .contact-card {
   width: 100%;
-  max-width: 400px;
-  padding: 40px 36px;
+  max-width: 460px;
+  padding: 48px 44px;
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: 20px;
 }
 .contact-card-label {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--accent);
   letter-spacing: 0.15em;
   display: block;
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 }
 .contact-card-items {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  margin-bottom: 28px;
+  gap: 22px;
+  margin-bottom: 32px;
 }
 .contact-card-item {
   display: flex;
   align-items: baseline;
-  gap: 12px;
+  gap: 14px;
 }
 .contact-card-key {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-muted);
-  min-width: 40px;
+  min-width: 48px;
   font-weight: 500;
 }
 .contact-card-val {
-  font-size: 15px;
+  font-size: 17px;
   color: var(--text-primary);
   font-weight: 500;
 }
 .contact-card-sub {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text-dim);
-  margin-bottom: 36px;
+  margin-bottom: 40px;
   letter-spacing: 0.03em;
 }
 
@@ -1026,10 +1025,10 @@ button {
   text-align: center;
 }
 .contact-qr-code {
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   margin: 0 auto 12px;
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
   border: 2px solid var(--accent);
   background: #fff;
