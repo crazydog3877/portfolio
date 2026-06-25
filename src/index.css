@@ -987,9 +987,8 @@ button {
     0 0 80px rgba(255,112,35,0.04),
     inset 0 1px 0 rgba(255,255,255,0.04);
   position: relative;
-  overflow: hidden;
 }
-.contact-card::before {
+.contact-card::after {
   content: '';
   position: absolute;
   top: -50%;

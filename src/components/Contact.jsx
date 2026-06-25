@@ -1,3 +1,5 @@
+import SpotlightCard from './SpotlightCard';
+
 export default function Contact() {
   return (
     <section className="contact" id="contact">
@@ -26,7 +28,7 @@ export default function Contact() {
 
           {/* Right — contact card */}
           <div className="contact-right">
-            <div className="contact-card">
+            <SpotlightCard className="contact-card" spotlightColor="rgba(255, 112, 35, 0.15)">
               <span className="contact-card-label">CONTACT</span>
 
               <div className="contact-card-items">
@@ -55,7 +57,7 @@ export default function Contact() {
                 </div>
                 <p className="contact-qr-label">扫一扫添加微信</p>
               </div>
-            </div>
+            </SpotlightCard>
           </div>
         </div>
       </div>
