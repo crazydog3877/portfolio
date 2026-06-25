@@ -978,9 +978,26 @@ button {
   width: 100%;
   max-width: 460px;
   padding: 48px 44px;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
+  background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, var(--bg-surface) 100%);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 20px;
+  box-shadow:
+    0 0 0 1px rgba(255,112,35,0.08),
+    0 8px 40px rgba(0,0,0,0.4),
+    0 0 80px rgba(255,112,35,0.04),
+    inset 0 1px 0 rgba(255,255,255,0.04);
+  position: relative;
+  overflow: hidden;
+}
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at 30% 20%, rgba(255,112,35,0.06) 0%, transparent 50%);
+  pointer-events: none;
 }
 .contact-card-label {
   font-family: var(--font-mono);
