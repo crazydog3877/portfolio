@@ -945,6 +945,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
 }
 .contact-headline {
   font-family: var(--font-display);
@@ -974,10 +975,12 @@ button {
 .contact-right {
   display: flex;
   justify-content: center;
+  align-items: stretch;
 }
 .contact-card {
   width: 100%;
   max-width: 460px;
+  height: fit-content;
   padding: 48px 44px;
   background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, var(--bg-surface) 100%);
   border: 1px solid rgba(255,255,255,0.08);
