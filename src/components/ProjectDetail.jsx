@@ -46,26 +46,15 @@ export default function ProjectDetail() {
           </div>
         </header>
 
-        {/* Content sections */}
-        {project.sections.map((section, i) => (
-          <section key={i} className="detail-section">
-            <h2 className="detail-section-heading">{section.heading}</h2>
-            <p className="detail-section-text">{section.content}</p>
-          </section>
-        ))}
-
-        {/* Image gallery */}
+        {/* Images — full width */}
         {project.images && project.images.length > 0 && (
-          <section className="detail-section">
-            <h2 className="detail-section-heading">界面展示</h2>
-            <div className="detail-gallery">
-              {project.images.map((img, i) => (
-                <div key={i} className="detail-gallery-item filled">
-                  <img src={img} alt={`${project.title} - ${i + 1}`} />
-                </div>
-              ))}
-            </div>
-          </section>
+          <div className="detail-images">
+            {project.images.map((img, i) => (
+              <div key={i} className="detail-image-item">
+                <img src={img} alt={`${project.title} — ${i + 1}`} />
+              </div>
+            ))}
+          </div>
         )}
 
         {/* Prev / Next navigation */}
