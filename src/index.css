@@ -937,19 +937,20 @@ button {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
-  align-items: center;
+  align-items: stretch;
   position: relative;
   z-index: 1;
 }
 .contact-left {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .contact-headline {
   font-family: var(--font-display);
   font-size: clamp(48px, 6vw, 80px);
   font-weight: 700;
-  line-height: 1.05;
+  line-height: 1.12;
   letter-spacing: -0.02em;
   color: var(--text-primary);
   margin-bottom: 0;
