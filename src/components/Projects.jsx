@@ -30,7 +30,6 @@ function ProjectCard({ project }) {
         </span>
       </div>
       <div className="project-info">
-        <span className="project-tag">{project.tag}</span>
         <h3 className="project-name">{project.name}</h3>
         <p className="project-desc">{project.desc}</p>
         <div className="project-meta">

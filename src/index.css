@@ -824,18 +824,6 @@ button {
   flex-direction: column;
   gap: 12px;
 }
-.project-tag {
-  font-family: var(--font-mono);
-  font-size: 10px; font-weight: 500;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--accent);
-  display: inline-block;
-  background: rgba(255, 112, 35, 0.08);
-  padding: 4px 10px;
-  border-radius: 3px;
-  align-self: flex-start;
-}
 .project-name {
   font-size: 24px;
   font-weight: 400;
