@@ -1,54 +1,27 @@
 import { Link } from 'react-router-dom';
+import projectData from '../data/projects';
 
-const projects = [
-  {
-    id: 'haitong',
-    name: '海通证券 — e海方舟',
-    tag: '量化交易平台',
-    desc: '为量化交易客户量身定制的专业平台，集行情显示、策略研究、策略编写、策略执行、极速交易、合规风控于一体。负责从用户研究到UI规范制定的全链路设计。',
-    meta: ['PC端', '金融科技', '2023-至今'],
-    accent: 'gold',
-    cover: '/projects/smt/项目封面.png',
-  },
-  {
-    id: 'smt',
-    name: '兴业证券 SMT-Q V5.0',
-    tag: '策略交易终端',
-    desc: '集行情数据、投资研究、策略编写、极速交易、智能算法于一体的专业策略交易平台，为私募管理人及高净值客户量身定制。',
-    meta: ['PC端', '金融科技', '2022-至今'],
-    accent: 'cyan',
-    cover: '/projects/smt/项目封面.png',
-  },
-  {
-    id: 'hualong',
-    name: '华龙点金智慧版',
-    tag: '移动 & PC 双端',
-    desc: '负责整体视觉设计，确保移动端与PC端视觉一致性。优化港股通、基金定投、华龙理财等核心功能界面，提升用户体验。',
-    meta: ['移动端', 'PC端', '2021-至今'],
-    accent: 'gold',
-    cover: '/projects/smt/项目封面.png',
-  },
-  {
-    id: 'haotian',
-    name: '皓天智通企业官网',
-    tag: '企业展示网站',
-    desc: '企业展示型网站设计，包含PC端和移动端。从交互界面到网页视觉的整体美术设计，配合前后端完成项目落地。',
-    meta: ['Web', '移动端', '2019'],
-    accent: 'cyan',
-    cover: '/projects/smt/项目封面.png',
-  },
-];
+const projects = Object.entries(projectData).map(([id, data]) => ({
+  id,
+  name: data.title,
+  tag: data.tag,
+  desc: data.overview.split('。')[0] + '。',
+  meta: data.meta,
+  cover: data.images && data.images.length > 0 ? data.images[0] : null,
+}));
 
 function ProjectCard({ project }) {
   return (
     <Link to={`/project/${project.id}`} className="project-card">
       <div className="project-image">
         <div className="project-image-inner">
-          <div className={`project-image-accent ${project.accent}`} />
           {project.cover ? (
             <img src={project.cover} alt={project.name} className="project-cover-img" />
           ) : (
-            <span className="project-image-label">{project.name.split('—')[0].trim()}</span>
+            <>
+              <div className="project-image-accent gold" />
+              <span className="project-image-label">{project.name.split('—')[0].trim()}</span>
+            </>
           )}
         </div>
       </div>
