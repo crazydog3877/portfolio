@@ -8,6 +8,7 @@ const projects = Object.entries(projectData).map(([id, data]) => ({
   desc: data.overview.split('。')[0] + '。',
   meta: data.meta,
   cover: data.images && data.images.length > 0 ? data.images[0] : null,
+  status: data.status || '已上线',
 }));
 
 function ProjectCard({ project }) {
@@ -24,6 +25,9 @@ function ProjectCard({ project }) {
             </>
           )}
         </div>
+        <span className={`project-status ${project.status === '已上线' ? 'online' : 'offline'}`}>
+          {project.status}
+        </span>
       </div>
       <div className="project-info">
         <span className="project-tag">{project.tag}</span>
