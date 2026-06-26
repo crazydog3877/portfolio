@@ -751,7 +751,7 @@ button {
 }
 .project-image {
   width: 100%;
-  aspect-ratio: 16/10;
+  aspect-ratio: 16/9;
   background: var(--bg-elevated);
   position: relative;
   overflow: hidden;
