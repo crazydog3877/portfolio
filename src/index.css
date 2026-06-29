@@ -541,17 +541,18 @@ button {
   text-align: center;
 }
 .about-stat-value {
-  font-size: 28px;
-  font-weight: 300;
-  letter-spacing: -0.03em;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--text-primary);
+  margin-bottom: 4px;
+  line-height: 1.1;
 }
 .about-stat-label {
   font-size: 12px;
+  color: #ffffff;
   font-weight: 500;
-  color: var(--text-muted);
-  margin-top: 4px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
 }
 
 /* Career timeline inside About */
