@@ -26,7 +26,7 @@ function ProjectCard({ project }) {
           )}
         </div>
         {project.status && (
-          <span className={`project-status ${project.status === 'REDESIGN' ? 'online' : 'offline'}`}>
+          <span className={`project-status ${project.status === 'REDESIGN' ? 'redesign' : 'online'}`}>
             {project.status}
           </span>
         )}

@@ -5,6 +5,7 @@ const projectData = {
     date: '2023.05 - 至今',
     role: 'UI 设计师',
     overview: '一款为量化交易客户量身定制的集行情显示、策略研究、策略编写、策略执行、极速交易、合规风险管理等一体化的专业量化交易平台。',
+    status: '已上线',
     sections: [
       {
         heading: '项目背景',
@@ -30,6 +31,7 @@ const projectData = {
     date: '2022.09 - 至今',
     role: 'UI 设计师',
     overview: '集行情数据、投资研究、策略编写、极速交易、智能算法、篮子组合、合规风控于一体的专业策略交易平台。',
+    status: '已上线',
     sections: [
       {
         heading: '项目背景',
@@ -108,6 +110,7 @@ const projectData = {
     date: '2019.11 - 2019.12',
     role: '网页设计师',
     overview: '企业展示型网站，包含PC端和移动端。负责从交互界面到网页视觉的整体美术设计。',
+    status: '已上线',
     sections: [
       {
         heading: '项目背景',

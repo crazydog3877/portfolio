@@ -775,10 +775,15 @@ button {
   -webkit-backdrop-filter: blur(12px) saturate(180%);
 }
 .project-status.online {
+  background: rgba(255, 112, 35, 0.2);
+  color: var(--accent);
+  border: 1px solid rgba(255, 112, 35, 0.3);
+  box-shadow: none;
+}
+.project-status.redesign {
   background: rgba(6, 182, 212, 0.2);
   color: #06B6D4;
   border: 1px solid rgba(6, 182, 212, 0.3);
-  box-shadow: none;
 }
 .project-status.offline {
   background: rgba(255, 255, 255, 0.04);
