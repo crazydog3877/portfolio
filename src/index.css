@@ -542,9 +542,10 @@ button {
   transition: all 0.4s var(--ease-out);
 }
 .about-stat:hover {
-  border-color: rgba(255, 112, 35, 0.3);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 28px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,112,35,0.08) inset;
+  border-color: var(--accent);
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 12px 40px rgba(255,112,35,0.2), 0 0 0 1px rgba(255,112,35,0.15) inset;
+  background: rgba(255,112,35,0.04);
 }
 .about-stat-value {
   font-size: 32px;
