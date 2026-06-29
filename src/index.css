@@ -531,14 +531,20 @@ button {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-  padding-top: 8px;
+  padding-top: 12px;
 }
 .about-stat {
-  padding: 14px 12px;
+  padding: 20px 16px;
   background: var(--bg-glass);
   border: 1px solid var(--border-subtle);
   border-radius: 12px;
   text-align: center;
+  transition: all 0.4s var(--ease-out);
+}
+.about-stat:hover {
+  border-color: rgba(255, 112, 35, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,112,35,0.08) inset;
 }
 .about-stat-value {
   font-size: 32px;
