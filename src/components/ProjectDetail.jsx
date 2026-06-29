@@ -1,6 +1,8 @@
 import { useParams, Link } from 'react-router-dom';
 import projectData from '../data/projects';
 
+const basePath = import.meta.env.BASE_URL || '/';
+
 const projectList = Object.entries(projectData).map(([id, data]) => ({ id, ...data }));
 
 export default function ProjectDetail() {
@@ -51,7 +53,7 @@ export default function ProjectDetail() {
           <div className="detail-images">
             {project.images.map((img, i) => (
               <div key={i} className="detail-image-item">
-                <img src={img} alt={`${project.title} — ${i + 1}`} />
+                <img src={basePath + img.replace(/^\//, '')} alt={`${project.title} — ${i + 1}`} />
               </div>
             ))}
           </div>

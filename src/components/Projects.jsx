@@ -1,14 +1,16 @@
 import { Link } from 'react-router-dom';
 import projectData from '../data/projects';
 
+const basePath = import.meta.env.BASE_URL || '/';
+
 const projects = Object.entries(projectData).map(([id, data]) => ({
   id,
   name: data.title,
   tag: data.tag,
   desc: data.overview.split('。')[0] + '。',
   meta: data.meta,
-  cover: data.images && data.images.length > 0 ? data.images[0] : null,
-  status: data.status || '已上线',
+  cover: data.images && data.images.length > 0 ? basePath + data.images[0].replace(/^\//, '') : null,
+  status: data.status || null,
 }));
 
 function ProjectCard({ project }) {
