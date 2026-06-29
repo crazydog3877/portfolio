@@ -25,9 +25,11 @@ function ProjectCard({ project }) {
             </>
           )}
         </div>
-        <span className={`project-status ${project.status === '已上线' ? 'online' : 'offline'}`}>
-          {project.status}
-        </span>
+        {project.status && (
+          <span className={`project-status ${project.status === 'REDESIGN' ? 'online' : 'offline'}`}>
+            {project.status}
+          </span>
+        )}
       </div>
       <div className="project-info">
         <h3 className="project-name">{project.name}</h3>
