@@ -931,7 +931,7 @@ button {
 .skill-new-tag.tag-0 { background: rgba(255, 255, 255, 0.1); color: var(--text-primary); }
 .skill-new-tag.tag-1 { background: var(--bg-elevated); color: var(--text-secondary); }
 .skill-new-tag.tag-2 { background: rgba(255, 112, 35, 0.15); color: var(--accent); }
-.skill-new-desc { font-size: 14px; line-height: 1.7; color: var(--text-secondary); max-width: 90%; }
+.skill-new-desc { font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.75); max-width: 90%; }
 .skill-new-graphic {
   position: absolute; bottom: -20px; right: -10px;
   width: 180px; height: 180px;
