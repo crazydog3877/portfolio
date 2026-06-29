@@ -3,13 +3,13 @@ import BorderGlow from './BorderGlow';
 const coreSkills = [
   {
     num: '01',
-    label: 'CORE',
+    label: 'UI DESIGN',
     title: 'UI 视觉设计',
     desc: '精通界面视觉语言定义、色彩搭配与版面布局。注重设计质量与细节，打造统一且富有品牌感的产品界面。',
   },
   {
     num: '02',
-    label: 'CORE',
+    label: 'INTERACTION',
     title: '交互与动效设计',
     desc: '从用户研究出发输出高保真交互原型，通过微交互与过渡动效提升产品质感，让复杂业务逻辑转化为直观流畅的体验。',
     featured: true,
@@ -20,19 +20,19 @@ const coreSkills = [
 const systemSkills = [
   {
     num: '03',
-    label: 'SYSTEM',
+    label: 'COMPONENTS',
     title: '组件化规范',
     desc: '制定并维护设计规范文档，保证多端多页面设计一致性，提升团队协作效率。',
   },
   {
     num: '04',
-    label: 'SYSTEM',
+    label: 'FULL PROCESS',
     title: '0→1 全流程',
     desc: '具备从需求分析、方案设计到开发落地的完整项目经验，能与多方高效沟通推进。',
   },
   {
     num: '05',
-    label: 'SYSTEM',
+    label: 'AI DESIGN',
     title: 'AI 设计提效',
     desc: '善用 AI 工具加速设计流程，从创意生成到批量产出，提升设计效率与创新能力。',
   },
