@@ -438,9 +438,9 @@ button {
 }
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 60px;
+  align-items: start;
 }
 .about-visual {
   position: relative;
@@ -529,12 +529,12 @@ button {
 }
 .about-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
   padding-top: 8px;
 }
 .about-stat {
-  padding: 16px;
+  padding: 14px 12px;
   background: var(--bg-glass);
   border: 1px solid var(--border-subtle);
   border-radius: 12px;

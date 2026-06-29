@@ -163,6 +163,10 @@ export default function About() {
                 <div className="about-stat-value">0→1</div>
                 <div className="about-stat-label">全流程</div>
               </div>
+              <div className="about-stat">
+                <div className="about-stat-value">10+</div>
+                <div className="about-stat-label">项目参与</div>
+              </div>
             </div>
           </div>
         </div>
