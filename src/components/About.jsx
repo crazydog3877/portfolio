@@ -129,7 +129,7 @@ export default function About() {
               沈震霄<span>.</span>
             </h2>
             <p className="about-bio">
-              拥有近5年APP、PC端UI设计经验，扎实的专业功底与敏锐的设计洞察力。
+              拥有七年APP、PC端UI设计经验，扎实的专业功底与敏锐的设计洞察力。
               擅长从用户研究出发，输出交互原型、视觉设计、动效与组件化规范。
               熟练驾驭Figma、Sketch、Adobe系列等设计协同工具，
               具备从0到1的完整项目经验。曾在解放军陆军某部服役，负责短片制作并荣获战区一等奖。
